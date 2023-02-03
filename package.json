@@ -1,11 +1,10 @@
 {
-  "name": "sample-node-project",
+  "name": "node_cicd",
   "version": "1.0.0",
-  "description": "Sample Node.js Project",
+  "description": "Node cicd",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Umesh",
   "license": "ISC",

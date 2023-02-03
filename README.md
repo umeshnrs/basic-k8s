@@ -1,6 +1,6 @@
 ```sh
-3. npm install
-4. npm start
+1. npm install
+2. npm start
 ```
 
-The application is running on [localhost](http://localhost:3000).
+The application is running on [localhost](http://localhost:3005).

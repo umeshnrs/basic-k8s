@@ -7,5 +7,5 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/app/public'));
 require('./app/routes')(app);
 http.createServer(app).listen(app.get('port'), function(){
-	console.log('Listen in ' + app.get('port') + ' app....');
+	console.log('Listen at port  ' + app.get('port'));
 });
