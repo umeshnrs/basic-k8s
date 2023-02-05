@@ -22,6 +22,8 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 3005
+        imagePullSecrets:
+        - name: docker-cfg
 ---
 apiVersion: v1
 kind: Service
