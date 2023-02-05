@@ -36,5 +36,13 @@ pipeline {
                     sh 'docker push $DOCKER_BUILD_IMAGE_CURRENT'
             }
         }
+        stage('Deploying App to Kubernetes') {
+          steps {
+                echo "Deploying App to Kubernetes"
+                script {
+                kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernate")
+                }
+            }
+        }
     }
 }
