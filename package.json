@@ -1,0 +1,15 @@
+{
+  "name": "node_cicd",
+  "version": "1.0.0",
+  "description": "Node cicd",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Umesh",
+  "license": "ISC",
+  "dependencies": {
+    "express":"latest",
+    "ejs":"latest"
+  }
+}
