@@ -10,7 +10,6 @@ pipeline {
         DOCKER = credentials("docker")
     }
     stages {
-        
         stage('Init'){
             steps {
                 echo 'checking docker version'
