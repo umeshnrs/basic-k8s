@@ -10,6 +10,7 @@ pipeline {
         DOCKER = credentials("docker")
     }
     stages {
+        
         stage('Init'){
             steps {
                 echo 'checking docker version'
@@ -33,6 +34,14 @@ pipeline {
                     sh 'docker login -u $DOCKER_USR -p $DOCKER_PSW $DOCKER_REGISTRY'
                     sh 'docker push $DOCKER_BUILD_IMAGE_LATEST'
                     sh 'docker push $DOCKER_BUILD_IMAGE_CURRENT'
+            }
+        }
+        stage('Deploying App to Kubernetes') {
+          steps {
+                echo "Deploying App to Kubernetes"
+                script {
+                kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernate")
+                }
             }
         }
     }
