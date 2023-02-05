@@ -15,7 +15,7 @@ spec:
       containers:
       - name: pfc
         image: umesh2645/pfc:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
