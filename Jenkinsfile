@@ -40,7 +40,7 @@ pipeline {
           steps {
                 echo "Deploying App to Kubernetes"
                 script {
-                kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernate")
+                kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernate", deleteResource :"true",)
                 }
             }
         }
