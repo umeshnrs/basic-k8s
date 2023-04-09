@@ -33,7 +33,11 @@ pipeline {
             steps {
                 echo "Deploying app to kubernetes"
                 script {
+<<<<<<< HEAD
+                kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernate", deleteResource :"true",)
+=======
                     kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernetes")
+>>>>>>> remotes/origin/master
                 }
             }
         }
