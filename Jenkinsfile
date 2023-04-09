@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo "Deploying app to kubernetes"
                 script {
-                    kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernetes")
+                    kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernetes", secretName: "regcred")
                 }
             }
         }
