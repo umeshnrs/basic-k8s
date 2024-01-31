@@ -3,4 +3,8 @@ module.exports = function(app) {
         res.render('index');
     });
 
+    app.get('/live',function(req, res){
+        res.render('live');
+    });
+
 }
