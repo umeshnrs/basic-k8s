@@ -4,12 +4,13 @@
   "description": "Node cicd",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "Umesh",
   "license": "ISC",
   "dependencies": {
-    "express":"latest",
-    "ejs":"latest"
+    "ejs": "latest",
+    "express": "latest",
+    "nodemon": "^3.0.3"
   }
 }
