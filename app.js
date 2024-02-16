@@ -6,6 +6,8 @@ app.set('views', __dirname + '/app/server/views');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/app/public'));
 require('./app/routes')(app);
-http.createServer(app).listen(app.get('port'), function(){
-	console.log('Listen at port  ' + app.get('port'));
+let port = app.get('port');
+
+http.createServer(app).listen(port, function(){
+	console.log(`Server listening on port http://localhost:${port} and app version is ${process.env.npm_package_version}`);
 });
