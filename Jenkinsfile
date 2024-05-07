@@ -2,7 +2,7 @@ pipeline {
     agent any
    environment {
             DOCKER_REGISTRY = "docker.io"
-            DOCKER_REPOSITORY = "umesh2645/pfc"
+            DOCKER_REPOSITORY = "umesh3149044/test-k8s"
             DOCKER_LATEST_TAG = "latest"
             VERSION = "${env.BUILD_ID}"
             DOCKER_BUILD_IMAGE_LATEST = "${DOCKER_REGISTRY}/${DOCKER_REPOSITORY}:${DOCKER_LATEST_TAG}"
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'github_login', url: 'https://github.com/umesh2645/pfc.git'
+                git branch: 'main', credentialsId: 'github_login', url: 'https://github.com/umeshnrs/basic-k8s.git'
             }
         }
         stage('Build docker image') {
