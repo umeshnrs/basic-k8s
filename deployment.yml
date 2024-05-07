@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pfc
+  name: test-k8s
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pfc
+      app: test-k8s
   template:
     metadata:
       labels:
-        app: pfc
+        app: test-k8s
     spec:
       containers:
-      - name: pfc
-        image: umesh2645/pfc:latest
+      - name: test-k8s
+        image: umesh3149044/test-k8s
         imagePullPolicy: Always
         resources:
           limits:
@@ -28,11 +28,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pfc-service
+  name: test-k8s-service
 spec:
   type: LoadBalancer
   selector:
-    app: pfc
+    app: test-k8s
   ports:
   - name: http
     port: 3005

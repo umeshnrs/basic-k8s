@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  environment:
-    container_name: environment
+  test-k8s:
+    container_name: test-k8s
     build:
       context: .
       dockerfile: Dockerfile
